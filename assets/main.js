@@ -1117,7 +1117,7 @@
 				sections = {
 					'home': {
 						hideHeader: true,
-						hideFooter: true,
+						hideFooter: false,
 						disableAutoScroll: true,
 					},
 				};
