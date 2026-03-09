@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Microfacto — Applications web & Agents IA | AI-Native Developer</title>
-    <meta name="description" content="Microfacto conçoit et pilote des applications web et des agents IA pour des projets ambitieux. Quelques missions par an, développement orchestré par IA, hébergé en France. Code propriété du client.">
+    <meta name="description" content="Microfacto conçoit et pilote des applications web et des agents IA pour des projets ambitieux. Quelques missions par an, développement orchestré par IA. Code propriété du client.">
     <meta name="author" content="Julien Masbou — Microfacto SAS">
     <meta name="robots" content="index, follow">
 
@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="Microfacto">
     <meta property="og:title" content="Microfacto — Applications web & Agents IA">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Quelques projets ambitieux par an. Applications web, agents IA, architecture. Développement orchestré par IA, hébergé en France.">
+    <meta property="og:description" content="Quelques projets ambitieux par an. Applications web, agents IA, architecture. Développement orchestré par IA, code propriété du client.">
     <meta property="og:url" content="https://microfacto.com/">
     <meta property="og:image" content="https://microfacto.com/assets/images/share.jpg">
     <meta property="og:locale" content="fr_FR">
@@ -24,20 +24,20 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Microfacto — Applications web & Agents IA">
-    <meta name="twitter:description" content="Quelques projets ambitieux par an. Applications web, agents IA, architecture. Développement orchestré par IA, hébergé en France.">
+    <meta name="twitter:description" content="Quelques projets ambitieux par an. Applications web, agents IA, architecture. Développement orchestré par IA, code propriété du client.">
     <meta name="twitter:image" content="https://microfacto.com/assets/images/share.jpg">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <!-- Fonts (self-hosted) -->
+    <style>
+        @font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 300 700; font-display: swap; src: url(assets/fonts/dm-sans.woff2) format('woff2'); }
+        @font-face { font-family: 'Instrument Serif'; font-style: normal; font-weight: 400; font-display: swap; src: url(assets/fonts/instrument-serif.woff2) format('woff2'); }
+        @font-face { font-family: 'Instrument Serif'; font-style: italic; font-weight: 400; font-display: swap; src: url(assets/fonts/instrument-serif-italic.woff2) format('woff2'); }
+        @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400 500; font-display: swap; src: url(assets/fonts/jetbrains-mono.woff2) format('woff2'); }
+    </style>
 
     <!-- Structured Data: ProfessionalService -->
     <script type="application/ld+json">
@@ -48,17 +48,17 @@
         "url": "https://microfacto.com",
         "logo": "https://microfacto.com/assets/images/favicon.png",
         "image": "https://microfacto.com/assets/images/share.jpg",
-        "description": "Microfacto conçoit et pilote des applications web et des agents IA pour des projets ambitieux. Quelques missions par an, développement orchestré par IA, hébergé en France. Code propriété du client.",
+        "description": "Microfacto conçoit et pilote des applications web et des agents IA pour des projets ambitieux. Quelques missions par an, développement orchestré par IA. Code propriété du client.",
         "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Toulouse",
-            "addressRegion": "Occitanie",
+            "addressLocality": "Paris",
+            "addressRegion": "Île-de-France",
             "addressCountry": "FR"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 43.6047,
-            "longitude": 1.4442
+            "latitude": 48.8566,
+            "longitude": 2.3522
         },
         "areaServed": {
             "@type": "Country",
@@ -73,8 +73,7 @@
             "url": "https://www.linkedin.com/in/julien-masbou/"
         },
         "sameAs": [
-            "https://www.linkedin.com/in/julien-masbou/",
-            "https://www.malt.fr/profile/julienmasbou"
+            "https://www.linkedin.com/in/julien-masbou/"
         ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -114,7 +113,7 @@
                 }
             ]
         },
-        "knowsAbout": ["FastAPI", "Python", "PostgreSQL", "Svelte", "TypeScript", "agents IA", "RAG", "LLM", "CI/CD", "SAST", "DAST", "Docker", "Scaleway", "RGPD"]
+        "knowsAbout": ["FastAPI", "Python", "PostgreSQL", "Svelte", "TypeScript", "agents IA", "RAG", "LLM", "CI/CD", "SAST", "DAST", "Docker", "Scaleway", "OVH", "Clever Cloud", "AWS", "GCP", "RGPD"]
     }
     </script>
 
@@ -145,7 +144,7 @@
                 "name": "Où sont hébergées les applications développées par Microfacto ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Toutes les solutions sont hébergées en France sur l'infrastructure Scaleway, conforme RGPD par conception. Le déploiement est géré via Coolify et Docker avec un pipeline CI/CD automatisé incluant des tests de sécurité SAST et DAST."
+                    "text": "L'hébergement s'adapte aux contraintes du projet : Scaleway, OVH ou Clever Cloud pour du 100% français conforme RGPD, ou AWS et GCP si le projet l'exige. Le déploiement est géré via Docker avec un pipeline CI/CD automatisé incluant des tests de sécurité SAST et DAST."
                 }
             },
             {
@@ -322,6 +321,10 @@
 
         .theme-toggle:hover { color: var(--text); }
         .theme-toggle svg { width: 18px; height: 18px; }
+        .theme-toggle .icon-moon { display: block; }
+        .theme-toggle .icon-sun { display: none; }
+        [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+        [data-theme="dark"] .theme-toggle .icon-sun { display: block; }
 
         .service-icon svg, .pipeline-icon svg, .sov-icon svg {
             width: 24px; height: 24px;
@@ -815,11 +818,11 @@
                 flex-direction: column;
                 background: rgba(255,255,255,0.95);
                 backdrop-filter: blur(20px);
+                padding: 1.5rem; gap: 1rem;
+                border-bottom: 1px solid var(--border-soft);
             }
             [data-theme="dark"] .nav-links {
                 background: rgba(17,17,20,0.95);
-                padding: 1.5rem; gap: 1rem;
-                border-bottom: 1px solid var(--border-soft);
             }
             .nav-links.open { display: flex; }
             .mobile-toggle { display: block; }
@@ -842,7 +845,7 @@
             <a href="#methode">Méthode</a>
             <a href="#souverainete">Souveraineté</a>
             <a href="#contact" class="nav-cta">Contact</a>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer de thème"><i data-lucide="sun"></i></button>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer de thème"><svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
         </div>
     </nav>
 
@@ -882,7 +885,7 @@
                 <div class="conviction-step step-active">
                     <div class="step-era"><span class="step-dot dot-green"></span>Résultat</div>
                     <div class="step-title">Production-ready</div>
-                    <p class="step-text">Du code testé, sécurisé, hébergé en France, qui vous appartient. Des projets conçus pour durer, pas des prototypes à refaire.</p>
+                    <p class="step-text">Du code testé, sécurisé, qui vous appartient. Des projets conçus pour durer, pas des prototypes à refaire.</p>
                 </div>
             </div>
         </div>
@@ -897,7 +900,7 @@
             </p>
             <div class="services-grid">
                 <div class="service-card reveal">
-                    <div class="service-icon si-blue"><i data-lucide="zap"></i></div>
+                    <div class="service-icon si-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg></div>
                     <h3>Applications web complètes</h3>
                     <p>Backend et frontend sur mesure, de l'architecture à la mise en production. API robustes, interfaces modernes, performances maîtrisées.</p>
                     <span class="service-tag">FastAPI</span>
@@ -905,7 +908,7 @@
                     <span class="service-tag">PostgreSQL</span>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon si-green"><i data-lucide="bot"></i></div>
+                    <div class="service-icon si-green"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div>
                     <h3>Agents IA en production</h3>
                     <p>Assistants spécialisés, systèmes conversationnels, agents métier. Conçus pour fonctionner en conditions réelles, pas en démo.</p>
                     <span class="service-tag">Agno</span>
@@ -913,14 +916,14 @@
                     <span class="service-tag">LLM</span>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon si-purple"><i data-lucide="blocks"></i></div>
+                    <div class="service-icon si-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></svg></div>
                     <h3>Architecture & API</h3>
                     <p>Conception de bases de données, architecture d'API, modélisation de systèmes. La fondation technique qui tient dans la durée.</p>
                     <span class="service-tag">REST API</span>
                     <span class="service-tag">PostgreSQL</span>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon si-yellow"><i data-lucide="shield-check"></i></div>
+                    <div class="service-icon si-yellow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
                     <h3>Sécurité & déploiement</h3>
                     <p>Pipeline CI/CD, analyse statique et dynamique (SAST/DAST), tests automatisés. Chaque ligne de code est validée avant la production.</p>
                     <span class="service-tag">CI/CD</span>
@@ -941,22 +944,22 @@
             <div class="workflow-visual reveal">
                 <div class="pipeline-steps">
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-blue"><i data-lucide="crosshair"></i></div>
+                        <div class="pipeline-icon pi-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
                         <div class="pipeline-label">Cadrage<br>du besoin</div>
                     </div>
                     <div class="pipeline-arrow">→</div>
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-green"><i data-lucide="rocket"></i></div>
+                        <div class="pipeline-icon pi-green"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
                         <div class="pipeline-label">Première version<br>fonctionnelle</div>
                     </div>
                     <div class="pipeline-arrow">→</div>
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-yellow"><i data-lucide="message-circle"></i></div>
+                        <div class="pipeline-icon pi-yellow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></svg></div>
                         <div class="pipeline-label">Retours<br>utilisateurs</div>
                     </div>
                     <div class="pipeline-arrow">→</div>
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-purple"><i data-lucide="puzzle"></i></div>
+                        <div class="pipeline-icon pi-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-1.705.707 2.402 2.402 0 0 1-1.704-.706l-1.568-1.568a1.026 1.026 0 0 0-.877-.29c-.493.074-.84.504-1.02.968a2.5 2.5 0 1 1-3.237-3.237c.464-.18.894-.527.967-1.02a1.026 1.026 0 0 0-.289-.877l-1.568-1.568A2.402 2.402 0 0 1 1.998 12c0-.617.236-1.234.706-1.704L4.23 8.77c.24-.24.581-.353.917-.303.515.077.877.528 1.073 1.01a2.5 2.5 0 1 0 3.259-3.259c-.482-.196-.933-.558-1.01-1.073-.05-.336.062-.676.303-.917l1.525-1.525A2.402 2.402 0 0 1 12 2c.617 0 1.234.236 1.704.706l1.568 1.568c.23.23.556.338.877.29.493-.074.84-.504 1.02-.968a2.5 2.5 0 1 1 3.237 3.237c-.464.18-.894.527-.967 1.02Z"/></svg></div>
                         <div class="pipeline-label">Nouvelles<br>briques</div>
                     </div>
                 </div>
@@ -971,23 +974,23 @@
     <section id="souverainete">
         <div class="section-inner">
             <div class="section-label reveal">Souveraineté</div>
-            <h2 class="section-title reveal">Votre code. Votre infrastructure.<br>Hébergé en France.</h2>
+            <h2 class="section-title reveal">Votre code. Votre infrastructure.<br>Vos règles.</h2>
             <p class="section-desc reveal">
-                Vous gardez le contrôle. Sur votre code, sur vos données, sur votre infrastructure.
+                Vous gardez le contrôle. Sur votre code, sur vos données, sur votre infrastructure. Stack et hébergement 100% français si la souveraineté l'exige.
             </p>
             <div class="sov-grid reveal">
                 <div class="sov-card">
-                    <div class="sov-icon si-blue"><i data-lucide="map-pin"></i></div>
-                    <h3>Hébergé en France</h3>
-                    <p>Toutes les solutions livrées sont hébergées sur une infrastructure française (Scaleway), conforme RGPD par conception.</p>
+                    <div class="sov-icon si-blue"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></div>
+                    <h3>Hébergement maîtrisé</h3>
+                    <p>Vous avez déjà une infra ? On s'y intègre. Sinon, on vous accompagne pour choisir celle qui convient à votre projet et à vos contraintes.</p>
                 </div>
                 <div class="sov-card">
-                    <div class="sov-icon si-green"><i data-lucide="key-round"></i></div>
+                    <div class="sov-icon si-green"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></div>
                     <h3>Propriété du code</h3>
                     <p>Le code vous appartient. Vous pouvez le migrer librement, le faire évoluer, changer de prestataire. Aucune dépendance à une plateforme.</p>
                 </div>
                 <div class="sov-card">
-                    <div class="sov-icon si-purple"><i data-lucide="code"></i></div>
+                    <div class="sov-icon si-purple"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
                     <h3>Open source</h3>
                     <p>Stack ouverte, pas de boîte noire. FastAPI, PostgreSQL, Svelte, Coolify. Des technologies éprouvées et auditables.</p>
                 </div>
@@ -1003,16 +1006,15 @@
                 Échangeons sur votre contexte. Si le projet est ambitieux et le périmètre clair, il y a de bonnes chances que l'on travaille ensemble.
             </p>
             <a href="mailto:contact@microfacto.com" class="btn-primary reveal">contact@microfacto.com →</a>
-            <p class="cta-email reveal">ou retrouvez-nous sur <a href="https://www.malt.fr/profile/julienmasbou" target="_blank" rel="noopener">Malt</a> · <a href="https://www.linkedin.com/in/julien-masbou/" target="_blank" rel="noopener">LinkedIn</a></p>
+            <p class="cta-email reveal">ou retrouvez-nous sur <a href="https://www.linkedin.com/in/julien-masbou/" target="_blank" rel="noopener">LinkedIn</a></p>
         </div>
     </section>
     </main>
 
     <footer>
         <div class="footer-inner">
-            <span class="footer-text">© 2026 Microfacto SAS — Grisolles, France</span>
+            <span class="footer-text">© 2026 Microfacto SAS — Paris, France</span>
             <div class="footer-links">
-                <a href="https://www.malt.fr/profile/julienmasbou" target="_blank" rel="noopener">Malt</a>
                 <a href="https://www.linkedin.com/in/julien-masbou/" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="mailto:contact@microfacto.com">Contact</a>
             </div>
@@ -1029,10 +1031,12 @@
 
         function applyTheme(theme) {
             document.documentElement.setAttribute('data-theme', theme);
-            var btn = document.querySelector('.theme-toggle');
-            var icon = theme === 'dark' ? 'sun' : 'moon';
-            btn.innerHTML = '<i data-lucide="' + icon + '"></i>';
-            if (window.lucide) lucide.createIcons({ nodes: [btn] });
+            var sun = document.querySelector('.theme-toggle .icon-sun');
+            var moon = document.querySelector('.theme-toggle .icon-moon');
+            if (sun && moon) {
+                sun.style.display = theme === 'dark' ? 'block' : 'none';
+                moon.style.display = theme === 'dark' ? 'none' : 'block';
+            }
         }
 
         function toggleTheme() {
@@ -1061,13 +1065,6 @@
             link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
         });
 
-        // Init Lucide icons
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.lucide) {
-                lucide.createIcons();
-                applyTheme(getPreferredTheme());
-            }
-        });
     </script>
 </body>
 </html>
