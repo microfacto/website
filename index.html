@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light only">
+    <meta name="color-scheme" content="light dark">
     <title>Microfacto — Applications web & Agents IA | AI-Native Developer</title>
     <meta name="description" content="Microfacto conçoit et pilote des applications web et des agents IA pour des projets ambitieux. Quelques missions par an, développement orchestré par IA, hébergé en France. Code propriété du client.">
     <meta name="author" content="Julien Masbou — Microfacto SAS">
@@ -30,6 +30,9 @@
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,6 +159,12 @@
         ]
     }
     </script>
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     <style>
         :root {
             /* Brand pastels */
@@ -199,6 +208,31 @@
             --font-mono: 'JetBrains Mono', monospace;
         }
 
+        /* Dark mode */
+        [data-theme="dark"] {
+            --gray-50: #1a1a1f;
+            --gray-100: #222228;
+            --gray-200: #2e2e36;
+            --gray-300: #3d3d47;
+            --gray-400: #6b6b7b;
+            --gray-500: #9191a0;
+            --gray-600: #ababb8;
+            --gray-700: #c5c5cf;
+            --gray-800: #dcdce2;
+            --gray-900: #eeeeef;
+            --gray-950: #f5f5f7;
+
+            --bg: #111114;
+            --bg-soft: #18181c;
+
+            --blue-soft: rgba(169, 219, 255, 0.1);
+            --blue-mid: rgba(169, 219, 255, 0.2);
+            --green-soft: rgba(163, 247, 176, 0.1);
+            --purple-soft: rgba(224, 200, 255, 0.08);
+            --pink-soft: rgba(255, 200, 200, 0.08);
+            --yellow-soft: rgba(255, 231, 169, 0.1);
+        }
+
         *, *::before, *::after {
             margin: 0; padding: 0; box-sizing: border-box;
         }
@@ -226,6 +260,10 @@
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-soft);
+        }
+
+        [data-theme="dark"] nav {
+            background: rgba(17, 17, 20, 0.85);
         }
 
         .nav-logo {
@@ -266,6 +304,29 @@
         }
 
         .nav-cta:hover { opacity: 0.85 !important; }
+
+        [data-theme="dark"] .nav-cta {
+            background: var(--gray-100) !important;
+            border: 1px solid var(--gray-300);
+        }
+
+        .theme-toggle {
+            background: none; border: none;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 0.3rem;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+
+        .theme-toggle:hover { color: var(--text); }
+        .theme-toggle svg { width: 18px; height: 18px; }
+
+        .service-icon svg, .pipeline-icon svg, .sov-icon svg {
+            width: 24px; height: 24px;
+            stroke: var(--text-secondary);
+        }
 
         /* === HERO === */
         .hero {
@@ -378,6 +439,11 @@
             opacity: 0.9;
             transform: translateY(-1px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        [data-theme="dark"] .btn-primary {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-300);
         }
 
         .btn-secondary {
@@ -749,6 +815,9 @@
                 flex-direction: column;
                 background: rgba(255,255,255,0.95);
                 backdrop-filter: blur(20px);
+            }
+            [data-theme="dark"] .nav-links {
+                background: rgba(17,17,20,0.95);
                 padding: 1.5rem; gap: 1rem;
                 border-bottom: 1px solid var(--border-soft);
             }
@@ -773,6 +842,7 @@
             <a href="#methode">Méthode</a>
             <a href="#souverainete">Souveraineté</a>
             <a href="#contact" class="nav-cta">Contact</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Changer de thème"><i data-lucide="sun"></i></button>
         </div>
     </nav>
 
@@ -827,7 +897,7 @@
             </p>
             <div class="services-grid">
                 <div class="service-card reveal">
-                    <div class="service-icon si-blue">⚡</div>
+                    <div class="service-icon si-blue"><i data-lucide="zap"></i></div>
                     <h3>Applications web complètes</h3>
                     <p>Backend et frontend sur mesure, de l'architecture à la mise en production. API robustes, interfaces modernes, performances maîtrisées.</p>
                     <span class="service-tag">FastAPI</span>
@@ -835,7 +905,7 @@
                     <span class="service-tag">PostgreSQL</span>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon si-green">🤖</div>
+                    <div class="service-icon si-green"><i data-lucide="bot"></i></div>
                     <h3>Agents IA en production</h3>
                     <p>Assistants spécialisés, systèmes conversationnels, agents métier. Conçus pour fonctionner en conditions réelles, pas en démo.</p>
                     <span class="service-tag">Agno</span>
@@ -843,14 +913,14 @@
                     <span class="service-tag">LLM</span>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon si-purple">🏗️</div>
+                    <div class="service-icon si-purple"><i data-lucide="blocks"></i></div>
                     <h3>Architecture & API</h3>
                     <p>Conception de bases de données, architecture d'API, modélisation de systèmes. La fondation technique qui tient dans la durée.</p>
                     <span class="service-tag">REST API</span>
                     <span class="service-tag">PostgreSQL</span>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-icon si-yellow">🔒</div>
+                    <div class="service-icon si-yellow"><i data-lucide="shield-check"></i></div>
                     <h3>Sécurité & déploiement</h3>
                     <p>Pipeline CI/CD, analyse statique et dynamique (SAST/DAST), tests automatisés. Chaque ligne de code est validée avant la production.</p>
                     <span class="service-tag">CI/CD</span>
@@ -871,22 +941,22 @@
             <div class="workflow-visual reveal">
                 <div class="pipeline-steps">
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-blue">🎯</div>
+                        <div class="pipeline-icon pi-blue"><i data-lucide="crosshair"></i></div>
                         <div class="pipeline-label">Cadrage<br>du besoin</div>
                     </div>
                     <div class="pipeline-arrow">→</div>
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-green">🚀</div>
+                        <div class="pipeline-icon pi-green"><i data-lucide="rocket"></i></div>
                         <div class="pipeline-label">Première version<br>fonctionnelle</div>
                     </div>
                     <div class="pipeline-arrow">→</div>
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-yellow">🔄</div>
+                        <div class="pipeline-icon pi-yellow"><i data-lucide="message-circle"></i></div>
                         <div class="pipeline-label">Retours<br>utilisateurs</div>
                     </div>
                     <div class="pipeline-arrow">→</div>
                     <div class="pipeline-step">
-                        <div class="pipeline-icon pi-purple">🧱</div>
+                        <div class="pipeline-icon pi-purple"><i data-lucide="puzzle"></i></div>
                         <div class="pipeline-label">Nouvelles<br>briques</div>
                     </div>
                 </div>
@@ -907,17 +977,17 @@
             </p>
             <div class="sov-grid reveal">
                 <div class="sov-card">
-                    <div class="sov-icon si-blue">🇫🇷</div>
+                    <div class="sov-icon si-blue"><i data-lucide="map-pin"></i></div>
                     <h3>Hébergé en France</h3>
                     <p>Toutes les solutions livrées sont hébergées sur une infrastructure française (Scaleway), conforme RGPD par conception.</p>
                 </div>
                 <div class="sov-card">
-                    <div class="sov-icon si-green">🔓</div>
+                    <div class="sov-icon si-green"><i data-lucide="key-round"></i></div>
                     <h3>Propriété du code</h3>
                     <p>Le code vous appartient. Vous pouvez le migrer librement, le faire évoluer, changer de prestataire. Aucune dépendance à une plateforme.</p>
                 </div>
                 <div class="sov-card">
-                    <div class="sov-icon si-purple">🛡️</div>
+                    <div class="sov-icon si-purple"><i data-lucide="code"></i></div>
                     <h3>Open source</h3>
                     <p>Stack ouverte, pas de boîte noire. FastAPI, PostgreSQL, Svelte, Coolify. Des technologies éprouvées et auditables.</p>
                 </div>
@@ -950,6 +1020,37 @@
     </footer>
 
     <script>
+        // Theme
+        function getPreferredTheme() {
+            const stored = localStorage.getItem('theme');
+            if (stored) return stored;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function applyTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            var btn = document.querySelector('.theme-toggle');
+            var icon = theme === 'dark' ? 'sun' : 'moon';
+            btn.innerHTML = '<i data-lucide="' + icon + '"></i>';
+            if (window.lucide) lucide.createIcons({ nodes: [btn] });
+        }
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            applyTheme(next);
+        }
+
+        applyTheme(getPreferredTheme());
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // Reveal
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -958,6 +1059,14 @@
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open'));
+        });
+
+        // Init Lucide icons
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.lucide) {
+                lucide.createIcons();
+                applyTheme(getPreferredTheme());
+            }
         });
     </script>
 </body>
